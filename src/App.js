@@ -6,10 +6,21 @@ import Homepage from './Homepage';
 import Portfolio from './Portfolio';
 import Project from './Project';
 import About from './About';
-import './App.css';
+import Footer from './Footer';
+// import './App.css';
 
 const StyledApp = styled.div`
-  height: 100vh;
+  * {
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  div,button {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
 `;
 
 class App extends Component {
@@ -23,6 +34,7 @@ class App extends Component {
           <Route exact path='/about' render={() => <About />} />
           <Route exact path='/' render={() => <Homepage />} />
         </BrowserRouter>
+        <Footer />
       </StyledApp>
     );
   }

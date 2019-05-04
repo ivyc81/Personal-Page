@@ -5,10 +5,19 @@ import { projects } from './projects';
 // import './Portfolio.css';
 
 const StyledPortfolio = styled.div`
+  position: relative;
+  top: 6vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  min-height: 90vh;
+`;
+
+const StyledDiv = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 
@@ -23,9 +32,9 @@ class Portfolio extends Component {
     return (
       <StyledPortfolio className='Portfolio'>
         <h1>Projects</h1>
-        <div>
+        <StyledDiv>
           { projects }
-        </div>
+        </StyledDiv>
       </StyledPortfolio>
     );
   }

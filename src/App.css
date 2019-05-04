@@ -1,11 +1,11 @@
 * {
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 h1 {
-  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
-div {
-  font-family: 'Open Sans Condensed', sans-serif;
+div,button {
+  font-family: 'Source Sans Pro', sans-serif;
 }

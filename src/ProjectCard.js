@@ -14,24 +14,28 @@ const StyledDiv = styled.div`
   :hover p{
     top: 0;
   }
+
+  @media only screen and (max-width: 600px) {
+    width: 40vw;
+    height: 40vw;
 `;
 
 const StyledImg = styled.img`
-  width: 25vw;
-  height: 25vw;
+  width: 100%;
+  height: 100%;
 `;
 
 const StyledP = styled.p`
   margin: 0px;
-  width: 25vw;
-  height: 25vw;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #090909b3;
   color: white;
   position: absolute;
-  top: 25vw;
+  top: 100%;
   transition: top 0.6s;
 `;
 

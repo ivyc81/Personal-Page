@@ -8,9 +8,16 @@ const GITHUB_URL = 'https://github.com/ivyc81';
 const LINKEDIN_URL = 'https://www.linkedin.com/in/ivyc8192/';
 
 const StyledAbout = styled.div`
+  position: relative;
+  top: 6vh;
   display: flex;
-  width: 100vw;
-  height: 94vh;
+  height: 90vh;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const StyledCol = styled.div`
@@ -18,7 +25,10 @@ const StyledCol = styled.div`
   flex-direction: column;
   width: 50vw;
   align-items: center;
-  justify-content: center;;
+  justify-content: center;
+
+  @media only screen and (max-width: 600px) {
+    width: 100vw;
 `;
 
 const StyledImg = styled.img`
