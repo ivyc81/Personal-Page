@@ -20,7 +20,7 @@ const StyledHomepage = styled.div`
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  height: 45%;
+  height: 50%;
 `;
 
 const ContainerLeft = styled.div`
