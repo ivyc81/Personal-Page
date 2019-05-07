@@ -1,20 +1,21 @@
 {
   "main.css": "/static/css/main.97098a23.chunk.css",
-  "main.js": "/static/js/main.51b0602c.chunk.js",
-  "main.js.map": "/static/js/main.51b0602c.chunk.js.map",
+  "main.js": "/static/js/main.afef8f57.chunk.js",
+  "main.js.map": "/static/js/main.afef8f57.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
   "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-  "static/js/2.ac197cb6.chunk.js": "/static/js/2.ac197cb6.chunk.js",
-  "static/js/2.ac197cb6.chunk.js.map": "/static/js/2.ac197cb6.chunk.js.map",
+  "static/js/2.74aee481.chunk.js": "/static/js/2.74aee481.chunk.js",
+  "static/js/2.74aee481.chunk.js.map": "/static/js/2.74aee481.chunk.js.map",
   "index.html": "/index.html",
-  "precache-manifest.cb40ed28cd5e01848bb75e060c71379e.js": "/precache-manifest.cb40ed28cd5e01848bb75e060c71379e.js",
+  "precache-manifest.0595ba8479868bec1db1c0bc1934752f.js": "/precache-manifest.0595ba8479868bec1db1c0bc1934752f.js",
   "service-worker.js": "/service-worker.js",
   "static/css/main.97098a23.chunk.css.map": "/static/css/main.97098a23.chunk.css.map",
   "static/media/Jobly-cover.png": "/static/media/Jobly-cover.fb5b3df9.png",
   "static/media/Microblog-cover.png": "/static/media/Microblog-cover.84ea8476.png",
   "static/media/Warbler-cover.png": "/static/media/Warbler-cover.cff59333.png",
+  "static/media/Warbler.gif": "/static/media/Warbler.0bca6d76.gif",
   "static/media/blueprint.jpg": "/static/media/blueprint.149266e6.jpg",
   "static/media/homepage.png": "/static/media/homepage.94688518.png",
   "static/media/logo.png": "/static/media/logo.8ee272a1.png",
-  "static/media/resume.pdf": "/static/media/resume.294d2b31.pdf"
+  "static/media/resume.pdf": "/static/media/resume.228504e8.pdf"
 }
