@@ -31,26 +31,38 @@ const StyledImg = styled.img`
   max-width: 80%;
 `;
 
-const StyledLink = styled.a`
-  font-size: 2em;
+const StyledTech = styled.p`
   margin: 0.1em;
+  padding: 0.1em;
   color: black;
+  border-radius: 0.5em;
+  border: 1px solid grey;
+`;
+
+const StyledTechContainer = styled.p`
+  display: flex;
 `;
 
 class Project extends Component {
+  showTech(tech){
+    return tech.split(',').map(e => <StyledTech>{e}</StyledTech>)
+  }
+
   render() {
     const { id } = this.props;
-    const { img, title, description, deployedURL, github } = projects[id];
+    const { img, title, description, deployedURL, github, tech, gif } = projects[id];
+    const techArr = this.showTech(tech);
     return (
       <StyledProject className='Project'>
         <StyledCol>
-          <StyledImg src={img} alt='profile' />
+          <StyledImg src={gif} alt='profile' />
         </StyledCol>
         <StyledCol>
           <h1>{title}</h1>
           <div>See the app: <a href={deployedURL}><i className="fas fa-globe"></i></a></div>
           <div>See source code: <a href={github}><i className="fab fa-github"></i></a></div>
           <p>{description}</p>
+          <StyledTechContainer>{techArr}</StyledTechContainer>
         </StyledCol>
       </StyledProject>
     );

@@ -11,7 +11,7 @@ const StyledDiv = styled.div`
   overflow: hidden;
   margin: 1em;
 
-  :hover p{
+  :hover a{
     top: 0;
   }
 
@@ -25,11 +25,12 @@ const StyledImg = styled.img`
   height: 100%;
 `;
 
-const StyledP = styled.p`
+const StyledLink = styled(Link)`
   margin: 0px;
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #090909b3;
@@ -37,15 +38,20 @@ const StyledP = styled.p`
   position: absolute;
   top: 100%;
   transition: top 0.6s;
+  text-decoration: none;
 `;
 
 class ProjectCard extends Component {
   render() {
-    const {img, title, id} = this.props;
+    const {img, title, id, tech} = this.props;
     return (
       <StyledDiv className='Project'>
         <StyledImg src={img} alt={title} />
-        <Link to={`/projects/${id}`} ><StyledP>{title}</StyledP></Link>
+        <StyledLink to={`/projects/${id}`} >
+          <h3>{title}</h3>
+          <p>{tech}</p>
+          <p>{'<-- Click to see more -->'}</p>
+        </StyledLink>
       </StyledDiv>
     );
   }

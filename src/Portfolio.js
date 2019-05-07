@@ -23,7 +23,9 @@ const StyledDiv = styled.div`
 
 class Portfolio extends Component {
   renderProjects(){
-    return Object.keys(projects).map((key) => <ProjectCard key={key} img={projects[key].img} title={projects[key].title} id={projects[key].id}/>);
+    return Object.keys(projects).map((key) => {
+      const {img, title, id, tech, gif} = projects[key];
+      return <ProjectCard key={key} img={img} title={title} id={id} tech={tech} gif={gif}/>});
   }
 
   render() {
