@@ -21,6 +21,9 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   height: 32vw;
+
+  @media only screen and (max-width: 600px) {
+    height: 64vw;
 `;
 
 const ContainerLeft = styled.div`

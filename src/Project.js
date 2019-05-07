@@ -45,7 +45,7 @@ const StyledTechContainer = styled.p`
 
 class Project extends Component {
   showTech(tech){
-    return tech.split(',').map(e => <StyledTech>{e}</StyledTech>)
+    return tech.split(',').map((e, i) => <StyledTech key={i}>{e}</StyledTech>)
   }
 
   render() {
