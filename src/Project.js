@@ -59,8 +59,8 @@ class Project extends Component {
         </StyledCol>
         <StyledCol>
           <h1>{title}</h1>
-          <div>See the app: <a href={deployedURL}><i className="fas fa-globe"></i></a></div>
-          <div>See source code: <a href={github}><i className="fab fa-github"></i></a></div>
+          { deployedURL && <div>See the app: <a href={deployedURL}><i className="fas fa-globe"></i></a></div> }
+          { github && <div>See source code: <a href={github}><i className="fab fa-github"></i></a></div> }
           <p>{description}</p>
           <StyledTechContainer>{techArr}</StyledTechContainer>
         </StyledCol>

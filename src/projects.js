@@ -1,7 +1,7 @@
 import placeholder from './placeholder.gif';
 import warblerCover from './Warbler-cover.png';
 import warblerGIF from './Warbler.gif';
-import joblyCover from './Jobly-cover.png';
+import theRelishCover from './TheRelish-cover.png';
 import microblogCover from './Microblog-cover.png';
 
 export const projects = {
@@ -16,13 +16,13 @@ export const projects = {
    gif: warblerGIF,
   },
   2:
-  {img: joblyCover,
-    title: 'Jobly-frontend',
-    description: 'Job search in one place',
+  {img: theRelishCover,
+    title: 'The Relish - CMS',
+    description: 'Job search in one plac',
     id: 2,
-    deployedURL:'https://jobly-more.herokuapp.com/',
-    github:'https://github.com/ivyc81/react-jobly',
-    tech: 'placeholder',
+    deployedURL:'',
+    github:'',
+    tech: 'React, Redux, Firebase',
     gif: placeholder,
   },
   3:
