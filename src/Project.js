@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { projects } from './projects';
+import { projects } from './data';
 // import './Project.css';
 
 const StyledProject = styled.div`

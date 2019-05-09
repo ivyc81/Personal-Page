@@ -78,6 +78,7 @@ const StyledButton = styled(Link)`
   align-items:${({ isLeft }) => {
     return isLeft ? 'flex-end' : 'flex-start'
   }};
+  justify-content: center;
   padding: 0.5em;
   color: #328CC1;
   border-radius: 3px;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import ProjectCard from './ProjectCard';
-import { projects } from './projects';
+import { projects } from './data';
 // import './Portfolio.css';
 
 const StyledPortfolio = styled.div`

@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import profilePhoto from './placeholder.gif';
-import resume from './resume.pdf';
-const EMAIL = 'ivyc8192@gmail.com';
-const GITHUB_URL = 'https://github.com/ivyc81';
-const LINKEDIN_URL = 'https://www.linkedin.com/in/ivyc8192/';
+import { aboutMe } from './data';
 
 const StyledAbout = styled.div`
   position: relative;
@@ -65,6 +61,7 @@ const StyledI = styled.i`
 
 class About extends Component {
   render() {
+    const { profilePhoto, resume, email, gitHub, linkedIn, bio } = aboutMe;
     return (
       <StyledAbout className='About'>
         <StyledCol>
@@ -73,12 +70,12 @@ class About extends Component {
         <StyledCol>
           <h1>Please connect with me</h1>
           <StyledButtons>
-            <StyledLink href={`mailto:${EMAIL}`}><i className="fas fa-envelope-square"></i></StyledLink>
-            <StyledLink href={LINKEDIN_URL}><i className="fab fa-linkedin"></i></StyledLink>
-            <StyledLink href={GITHUB_URL}><i className="fab fa-github-square"></i></StyledLink>
+            <StyledLink href={`mailto:${email}`}><i className="fas fa-envelope-square"></i></StyledLink>
+            <StyledLink href={linkedIn}><i className="fab fa-linkedin"></i></StyledLink>
+            <StyledLink href={gitHub}><i className="fab fa-github-square"></i></StyledLink>
             <StyledButton href={resume} download>My resume<StyledI className="fas fa-file"></StyledI></StyledButton>
           </StyledButtons>
-          <p>A structural engineer becoming web developer</p>
+          <p>{bio}</p>
         </StyledCol>
       </StyledAbout>
     );
