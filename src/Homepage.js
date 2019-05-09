@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import homepage from './homepage.png';
 import blueprint from './blueprint.jpg';
+import { linkColor } from './theme';
 
 // import './Homepage.css';
 
@@ -24,6 +25,7 @@ const Container = styled.div`
 
   @media only screen and (max-width: 600px) {
     height: 64vw;
+  }
 `;
 
 const ContainerLeft = styled.div`
@@ -39,6 +41,7 @@ const ContainerLeft = styled.div`
 
   @media only screen and (max-width: 600px) {
     width: 40vw;
+  }
 `;
 
 const ContainerRight = styled.div`
@@ -55,6 +58,7 @@ const ContainerRight = styled.div`
 
   @media only screen and (max-width: 600px) {
     width: 40vw;
+  }
 `;
 
 const StyledImg = styled.img`
@@ -66,6 +70,7 @@ const StyledImg = styled.img`
 
   @media only screen and (max-width: 600px) {
     width: 80vw;
+  }
 `;
 
 const StyledH1 = styled.h1`
@@ -80,7 +85,7 @@ const StyledButton = styled(Link)`
   }};
   justify-content: center;
   padding: 0.5em;
-  color: #328CC1;
+  color: ${linkColor};
   border-radius: 3px;
   text-decoration: none;
   width: 25vw;
@@ -95,6 +100,11 @@ const StyledButton = styled(Link)`
 
   @media only screen and (max-width: 600px) {
     display: none;
+  }
+
+  :hover h2 {
+    text-decoration: underline;
+  }
 `;
 
 class Homepage extends Component {

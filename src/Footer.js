@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { footerBackgroundColor } from './theme';
+import { footerBackgroundColor, footerTextColor } from './theme';
 
 const StyledFooter = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ const StyledFooter = styled.div`
   bottom: 0;
   width: 100vw;
   height: 4vh;
-  color: white;
+  color: ${footerTextColor};
   font-size: 0.8em;
 
   @media only screen and (max-width: 600px) {

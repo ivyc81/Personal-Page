@@ -10,7 +10,6 @@ const StyledLogo = styled(Link)`
   font-size: 1.3em;
   text-decoration: none;
   color: ${navTextColor};
-  font-family: 'Source Sans Pro', sans-serif;
 
   img {
     height: 6vh;
@@ -35,23 +34,27 @@ const StyledNavLink = styled(NavLink)`
   padding: 1em;
   text-decoration: none;
   color: ${navTextColor};
-  `;
 
-  class Nav extends Component {
-    render() {
-      const activeStyle = {
-        "fontWeight":"bold",
-        "textDecoration":"underline"
+  :hover {
+    text-decoration: underline;
+  }
+`;
+
+class Nav extends Component {
+  render() {
+    const activeStyle = {
+      "fontWeight":"bold",
+      "textDecoration":"underline"
     }
 
     return (
-      <StyledNav className="Nav">
-        <StyledLogo to='/'><img src={logo} alt='logo' /><b>Hi, I am Cynthia</b></StyledLogo>
-        <div>
-        <StyledNavLink exact to='/portfolio' activeStyle={activeStyle}>Portfolio</StyledNavLink>
-        <StyledNavLink exact to='/about' activeStyle={activeStyle}>About</StyledNavLink>
-        </div>
-      </StyledNav>
+        <StyledNav className="Nav">
+          <StyledLogo to='/'><img src={logo} alt='logo' /><b>Hi, I am Cynthia</b></StyledLogo>
+          <div>
+          <StyledNavLink exact to='/portfolio' activeStyle={activeStyle}>Portfolio</StyledNavLink>
+          <StyledNavLink exact to='/about' activeStyle={activeStyle}>About</StyledNavLink>
+          </div>
+        </StyledNav>
     );
   }
 }

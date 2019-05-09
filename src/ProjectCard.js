@@ -10,6 +10,7 @@ const StyledDiv = styled.div`
   height: 25vw;
   overflow: hidden;
   margin: 1em;
+  outline: 5px solid #847c77;
 
   :hover a{
     top: 0;
@@ -33,7 +34,7 @@ const StyledLink = styled(Link)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #090909b3;
+  background-color: #847c77bd;
   color: white;
   position: absolute;
   top: 100%;

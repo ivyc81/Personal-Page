@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { aboutMe } from './data';
+import { linkColor } from './theme';
 
 const StyledAbout = styled.div`
   position: relative;
@@ -39,12 +39,12 @@ const StyledButtons = styled.div`
 const StyledLink = styled.a`
   font-size: 2em;
   margin: 0.1em;
-  color: black;
+  color: ${linkColor};
 `;
 
 const StyledButton = styled.a`
   height: 28px;
-  background-color: black;
+  background-color: ${linkColor};
   color: white;
   border-radius: 3px;
   text-decoration: none;

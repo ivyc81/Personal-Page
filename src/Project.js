@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { projects } from './data';
+import { linkColor } from './theme';
 // import './Project.css';
 
 const StyledProject = styled.div`
@@ -39,6 +40,15 @@ const StyledTech = styled.p`
   border: 1px solid grey;
 `;
 
+const StyledLink = styled.a`
+  color: ${linkColor};
+  text-decoration: none;
+
+  :hover {
+    text-decoration: underline;
+  }
+`;
+
 const StyledTechContainer = styled.p`
   display: flex;
 `;
@@ -59,8 +69,8 @@ class Project extends Component {
         </StyledCol>
         <StyledCol>
           <h1>{title}</h1>
-          { deployedURL && <div>See the app: <a href={deployedURL}><i className="fas fa-globe"></i></a></div> }
-          { github && <div>See source code: <a href={github}><i className="fab fa-github"></i></a></div> }
+          { deployedURL && <div><StyledLink href={deployedURL}><i className="fas fa-globe"></i> See the app </StyledLink></div> }
+          { github && <div><StyledLink href={github}><i className="fab fa-github"></i> See source code </StyledLink></div> }
           <p>{description}</p>
           <StyledTechContainer>{techArr}</StyledTechContainer>
         </StyledCol>
