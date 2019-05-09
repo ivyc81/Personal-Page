@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { projects } from './data';
-import { linkColor } from './theme';
+import { linkColor, textColor } from './theme';
 // import './Project.css';
 
 const StyledProject = styled.div`
@@ -9,23 +9,26 @@ const StyledProject = styled.div`
   top: 6vh;
   display: flex;
   height: 90vh;
+  width: 80vw;
+  margin: 0 auto;
 
   @media only screen and (max-width: 600px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100vw;
   }
 `;
 
 const StyledCol = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  width: 50%;
   align-items: center;
   justify-content: center;
 
   @media only screen and (max-width: 600px) {
-    width: 100vw;
+    width: 100%;
 `;
 
 const StyledImg = styled.img`
@@ -46,6 +49,7 @@ const StyledLink = styled.a`
 
   :hover {
     text-decoration: underline;
+    color: ${textColor};
   }
 `;
 

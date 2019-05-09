@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { linkColor } from './theme';
 // import './Project.css';
 
 const StyledDiv = styled.div`
@@ -10,7 +11,7 @@ const StyledDiv = styled.div`
   height: 25vw;
   overflow: hidden;
   margin: 1em;
-  outline: 5px solid #847c77;
+  outline: 1.5px solid ${linkColor};
 
   :hover a{
     top: 0;

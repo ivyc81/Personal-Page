@@ -23,7 +23,6 @@ class Footer extends Component {
   render() {
     return (
       <StyledFooter className="Footer">
-        <p>Background picture from: https://dsps.lib.uiowa.edu/clip/library/red-oak/</p>
         <p>Copyright © 2019 Cynthia Lu.</p>
       </StyledFooter>
     );

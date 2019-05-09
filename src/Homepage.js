@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import homepage from './homepage.png';
 import blueprint from './blueprint.jpg';
-import { linkColor } from './theme';
+import { linkColor, textColor } from './theme';
 
 // import './Homepage.css';
 
@@ -102,9 +102,19 @@ const StyledButton = styled(Link)`
     display: none;
   }
 
+  :hover {
+    color:${textColor};
+  }
+
   :hover h2 {
     text-decoration: underline;
   }
+`;
+
+const StyledPhotoCredit = styled.small`
+  color: ${linkColor};
+  font-size: 0.8em;
+  margin: 0;
 `;
 
 class Homepage extends Component {
@@ -183,8 +193,9 @@ class Homepage extends Component {
             <div>My achievements</div>
           </StyledButton>
         </Container>
+        <StyledPhotoCredit>Background picture from: https://dsps.lib.uiowa.edu/clip/library/red-oak/</StyledPhotoCredit>
         <StyledH1>Hi I am Cynthia</StyledH1>
-        <p>A <u>structural engineer</u> becoming <u>web developer</u></p>
+        <div>A <u>structural engineer</u> becoming <u>web developer</u></div>
       </StyledHomepage>
     );
   }

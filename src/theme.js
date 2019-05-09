@@ -1,10 +1,19 @@
+// Theme
+const darkColor = '#847c77';
+const lightColor = '#ede7e3';
+const hilightColor = '#D5D5D5';
+
+
+// TextColor
+export const textColor = darkColor;
+
 // NavBar
-export const navBackgroundColor = '#ede7e3';
-export const navTextColor = '#847c77';
+export const navTextColor = darkColor;
+export const navBackgroundColor = lightColor;
 
 // Footer
-export const footerBackgroundColor = '#ede7e3';
-export const footerTextColor = '#847c77';
+export const footerBackgroundColor = lightColor;
+export const footerTextColor = darkColor;
 
 // Link
-export const linkColor = '#328CC1';
+export const linkColor = hilightColor;

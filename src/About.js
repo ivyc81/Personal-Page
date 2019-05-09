@@ -1,30 +1,33 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { aboutMe } from './data';
-import { linkColor } from './theme';
+import { linkColor, textColor } from './theme';
 
 const StyledAbout = styled.div`
   position: relative;
   top: 6vh;
   display: flex;
   height: 90vh;
+  width: 80vw;
+  margin: 0 auto;
 
   @media only screen and (max-width: 600px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100vw;
   }
 `;
 
 const StyledCol = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  width: 50%;
   align-items: center;
   justify-content: center;
 
   @media only screen and (max-width: 600px) {
-    width: 100vw;
+    width: 100%;
 `;
 
 const StyledImg = styled.img`
@@ -41,6 +44,10 @@ const StyledLink = styled.a`
   font-size: 2em;
   margin: 0.1em;
   color: ${linkColor};
+
+  :hover {
+    color: ${textColor};
+  }
 `;
 
 const StyledButton = styled.a`
@@ -54,6 +61,10 @@ const StyledButton = styled.a`
   align-items: center;
   padding: 0 8px;
   font-weight: bold;
+
+  :hover {
+    background-color: ${textColor};
+  }
 `;
 
 const StyledI = styled.i`
