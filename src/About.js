@@ -34,6 +34,7 @@ const StyledImg = styled.img`
 const StyledButtons = styled.div`
   display: flex;
   align-items: center;
+  margin: 0.67em 0;
 `;
 
 const StyledLink = styled.a`
@@ -60,8 +61,14 @@ const StyledI = styled.i`
 `;
 
 class About extends Component {
+  renderBio(bio){
+    return bio.map((p, i) =><div key={i}>{p}</div>);
+  }
+
   render() {
-    const { profilePhoto, resume, email, gitHub, linkedIn, bio } = aboutMe;
+    const { profilePhoto, resume, email, gitHub, linkedIn, bioTitle, bio } = aboutMe;
+    const bioP = this.renderBio(bio);
+
     return (
       <StyledAbout className='About'>
         <StyledCol>
@@ -69,13 +76,14 @@ class About extends Component {
         </StyledCol>
         <StyledCol>
           <h1>Please connect with me</h1>
+          <h3>{bioTitle}</h3>
           <StyledButtons>
             <StyledLink href={`mailto:${email}`}><i className="fas fa-envelope-square"></i></StyledLink>
             <StyledLink href={linkedIn}><i className="fab fa-linkedin"></i></StyledLink>
             <StyledLink href={gitHub}><i className="fab fa-github-square"></i></StyledLink>
             <StyledButton href={resume} download>My resume<StyledI className="fas fa-file"></StyledI></StyledButton>
           </StyledButtons>
-          <p>{bio}</p>
+          {bioP}
         </StyledCol>
       </StyledAbout>
     );

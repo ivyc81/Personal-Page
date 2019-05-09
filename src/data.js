@@ -7,7 +7,7 @@ import theRelishGIF from './TheRelish.gif';
 import microblogCover from './Microblog-cover.png';
 
 // About me
-import profilePhoto from './placeholder.gif';
+import profilePhoto from './profile.png';
 import resume from './resume.pdf';
 
 
@@ -26,7 +26,7 @@ export const projects = {
   2:
   {img: theRelishCover,
     title: 'The Relish - CMS',
-    description: 'Job search in one plac',
+    description: 'The app where fans go to talk sports',
     id: 2,
     deployedURL:'',
     github:'',
@@ -57,5 +57,6 @@ export const aboutMe = {
   email: EMAIL,
   gitHub: GITHUB_URL,
   linkedIn: LINKEDIN_URL,
-  bio: 'Structural engineer becoming software engineer',
+  bioTitle: 'I am a web developer based in San Francisco.',
+  bio: ['I love coding, problem solving and good food.'],
 };

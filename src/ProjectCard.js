@@ -17,8 +17,8 @@ const StyledDiv = styled.div`
   }
 
   @media only screen and (max-width: 600px) {
-    width: 40vw;
-    height: 40vw;
+    width: 60vw;
+    height: 60vw;
 `;
 
 const StyledImg = styled.img`
