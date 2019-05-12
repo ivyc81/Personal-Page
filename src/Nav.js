@@ -35,6 +35,9 @@ const StyledDiv = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
 `;
 
 const StyledNavLink = styled(NavLink)`

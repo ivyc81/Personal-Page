@@ -21,11 +21,16 @@ const StyledProject = styled.div`
 `;
 
 const StyledCol = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 50%;
   align-items: center;
   justify-content: center;
+  left: ${({ isLoaded, isLeft }) => {
+    return isLoaded  ? '0' : isLeft? '-50vw' : '50vw';
+  }};
+  transition: 1s all;
 
   @media only screen and (max-width: 600px) {
     width: 100%;
@@ -58,6 +63,20 @@ const StyledTechContainer = styled.p`
 `;
 
 class Project extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      isLoaded: false,
+    }
+    this.load = this.load.bind(this);
+  }
+
+  load(){
+    this.setState({
+      isLoaded: true,
+    });
+  }
+
   showTech(tech){
     return tech.split(',').map((e, i) => <StyledTech key={i}>{e}</StyledTech>)
   }
@@ -65,13 +84,14 @@ class Project extends Component {
   render() {
     const { id } = this.props;
     const { img, title, description, deployedURL, github, tech, gif } = projects[id];
+    const { isLoaded } = this.state;
     const techArr = this.showTech(tech);
     return (
-      <StyledProject className='Project'>
-        <StyledCol>
+      <StyledProject className='Project' onLoad={this.load}>
+        <StyledCol isLoaded={isLoaded} isLeft={true}>
           <StyledImg src={gif} alt='profile' />
         </StyledCol>
-        <StyledCol>
+        <StyledCol isLoaded={isLoaded}>
           <h1>{title}</h1>
           { deployedURL && <div><StyledLink href={deployedURL}><i className="fas fa-globe"></i> See the app </StyledLink></div> }
           { github && <div><StyledLink href={github}><i className="fab fa-github"></i> See source code </StyledLink></div> }

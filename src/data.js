@@ -14,6 +14,16 @@ import resume from './resume.pdf';
 // Projects
 export const projects = {
   1:
+  {img: theRelishCover,
+    title: 'The Relish - CMS',
+    description: 'We worked on the CMS system to improve load time. ',
+    id: 2,
+    deployedURL:'',
+    github:'',
+    tech: 'React, Redux, Firebase',
+    gif: theRelishGIF,
+  },
+  2:
   {img: warblerCover,
    title: 'Warbler',
    description: 'A twitter mock',
@@ -22,16 +32,6 @@ export const projects = {
    github:'https://github.com/ivyc81/Warbler',
    tech: 'Python, Flask',
    gif: warblerGIF,
-  },
-  2:
-  {img: theRelishCover,
-    title: 'The Relish - CMS',
-    description: 'The app where fans go to talk sports',
-    id: 2,
-    deployedURL:'',
-    github:'',
-    tech: 'React, Redux, Firebase',
-    gif: theRelishGIF,
   },
   3:
   {img: microblogCover,
