@@ -42,10 +42,10 @@ const StyledImg = styled.img`
 
 const StyledTech = styled.p`
   margin: 0.1em;
-  padding: 0.1em;
-  color: black;
-  border-radius: 0.5em;
-  border: 1px solid grey;
+  padding: 0.1em 0.2em;
+  color: ${textColor};
+  border-radius: 0.3em;
+  border: 1px solid ${textColor};
 `;
 
 const StyledLink = styled.a`
