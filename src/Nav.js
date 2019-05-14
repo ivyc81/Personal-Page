@@ -60,7 +60,7 @@ class Nav extends Component {
     return (
         <StyledNav className="Nav">
           <StyledDiv>
-            <StyledLogo to='/'><img src={logo} alt='logo' /><b>Hi, I am Cynthia</b></StyledLogo>
+            <StyledLogo to='/'><img src={logo} alt='logo' /> <b>Hi, I am Cynthia</b></StyledLogo>
             <div>
             <StyledNavLink exact to='/portfolio' activeStyle={activeStyle}>Portfolio</StyledNavLink>
             <StyledNavLink exact to='/about' activeStyle={activeStyle}>About</StyledNavLink>

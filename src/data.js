@@ -5,6 +5,7 @@ import warblerGIF from './Warbler.gif';
 import theRelishCover from './TheRelish-cover.png';
 import theRelishGIF from './TheRelish.gif';
 import microblogCover from './Microblog-cover.png';
+import microblogGIF from './Microblog.gif';
 
 // About me
 import profilePhoto from './profile.png';
@@ -36,12 +37,12 @@ export const projects = {
   3:
   {img: microblogCover,
     title: 'Microblog',
-    description: 'An app that allows user to post articles and rate articles.',
+    description: 'An app that allows user to post articles and rate articles. The posts is sorted according to votes and changes position accordingly.',
     id: 3,
     deployedURL:'https://microblog-less.herokuapp.com/',
     github:'https://github.com/ivyc81/redux-microblog',
     tech: 'Javascript, React, Redux',
-    gif: placeholder,
+    gif: microblogGIF,
   },
 };
 
