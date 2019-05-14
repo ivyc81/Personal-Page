@@ -16,7 +16,7 @@ export const projects = {
   1:
   {img: theRelishCover,
     title: 'The Relish - CMS',
-    description: 'We worked on the CMS system to improve load time. ',
+    description: 'We worked on the CMS system to improve load time.',
     id: 1,
     deployedURL:'',
     github:'',
@@ -36,9 +36,9 @@ export const projects = {
   3:
   {img: microblogCover,
     title: 'Microblog',
-    description: 'React-Redux',
+    description: 'An app that allows user to post articles and rate articles.',
     id: 3,
-    deployedURL:'',
+    deployedURL:'https://microblog-less.herokuapp.com/',
     github:'https://github.com/ivyc81/redux-microblog',
     tech: 'Javascript, React, Redux',
     gif: placeholder,
