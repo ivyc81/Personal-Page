@@ -22,7 +22,7 @@ const StyledProject = styled.div`
 
 const StyledCol = styled.div`
   position: relative;
-  display: flex;
+  display: ${({ isReady}) => isReady ? 'flex' : 'none'};
   flex-direction: column;
   width: 50%;
   align-items: center;
@@ -67,13 +67,25 @@ class Project extends Component {
     super(props);
     this.state = {
       isLoaded: false,
+      GIFReady: false,
     }
     this.load = this.load.bind(this);
+    this.loadGif = this.loadGif.bind(this);
+  }
+
+  componentDidMount(){
+
   }
 
   load(){
     this.setState({
       isLoaded: true,
+    });
+  }
+
+  loadGif() {
+    this.setState({
+      GIFReady: true,
     });
   }
 
@@ -84,14 +96,17 @@ class Project extends Component {
   render() {
     const { id } = this.props;
     const { img, title, description, deployedURL, github, tech, gif } = projects[id];
-    const { isLoaded } = this.state;
+    const { isLoaded, GIFReady } = this.state;
     const techArr = this.showTech(tech);
     return (
-      <StyledProject className='Project' onLoad={this.load}>
-        <StyledCol isLoaded={isLoaded} isLeft={true}>
+      <StyledProject className='Project'>
+        <StyledCol isLoaded={isLoaded} isReady={!GIFReady} isLeft={true} onLoad={this.load}>
+          <StyledImg src={img} alt='profile' />
+        </StyledCol>
+        <StyledCol isLoaded={isLoaded} isReady={GIFReady} isLeft={true} onLoad={this.loadGif}>
           <StyledImg src={gif} alt='profile' />
         </StyledCol>
-        <StyledCol isLoaded={isLoaded}>
+        <StyledCol isLoaded={isLoaded} isReady={true}>
           <h1>{title}</h1>
           { deployedURL && <div><StyledLink href={deployedURL}><i className="fas fa-globe"></i> See the app </StyledLink></div> }
           { github && <div><StyledLink href={github}><i className="fab fa-github"></i> See source code </StyledLink></div> }
