@@ -17,7 +17,7 @@ export const projects = {
   1:
   {img: theRelishCover,
     title: 'The Relish - CMS',
-    description: 'We worked on the CMS system to improve load time.',
+    description: 'We worked on the stats page of the CMS system, which constains graphs to visually represent changes in user activity by date and time. We implemented lazy-loading and made the page visibally faster! We also wrote tests for important functions to ensure quality.',
     id: 1,
     deployedURL:'',
     github:'',
@@ -27,7 +27,7 @@ export const projects = {
   2:
   {img: warblerCover,
    title: 'Warbler',
-   description: 'A twitter mock',
+   description: 'A twitter mock. We designed the relational database and built a REST API with Flask. The app allows users to register/login and see protected content once authenticated. To ensure quality, we also wrote tests for all our routes and models.',
    id: 2,
    deployedURL:'https://warbler-less.herokuapp.com/',
    github:'https://github.com/ivyc81/Warbler',
@@ -37,7 +37,7 @@ export const projects = {
   3:
   {img: microblogCover,
     title: 'Microblog',
-    description: 'An app that allows user to post articles and rate articles. The posts is sorted according to votes and changes position accordingly.',
+    description: 'An app that allows user to post articles and rate articles. Posts are positioned by popularity.',
     id: 3,
     deployedURL:'https://microblog-less.herokuapp.com/',
     github:'https://github.com/ivyc81/redux-microblog',
