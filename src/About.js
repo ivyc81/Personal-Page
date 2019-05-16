@@ -30,8 +30,39 @@ const StyledCol = styled.div`
     width: 100%;
 `;
 
-const StyledImg = styled.img`
+const StyledAnimation = styled.div`
   max-width: 80%;
+  position: relative;
+
+  :before {
+    position: absolute;
+    background-color: #fff;
+    top: ${({ isLoaded }) =>{
+      return isLoaded? '100%' : 0;
+    }};
+    left: 0;
+    width: 50%;
+    content: "";
+    height: 100%;
+    transition: 2s all;
+  }
+
+  ::after {
+    position: absolute;
+    background-color: #fff;
+    bottom: ${({ isLoaded }) =>{
+      return isLoaded? '100%' : 0;
+    }};
+    right: 0;
+    width: 50%;
+    content: "";
+    height: 100%;
+    transition: 2s all;
+  }
+`;
+
+const StyledImg = styled.img`
+  width: 100%;
 `;
 
 const StyledButtons = styled.div`
@@ -72,6 +103,21 @@ const StyledI = styled.i`
 `;
 
 class About extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      isLoaded: false,
+    };
+    this.load = this.load.bind(this);
+  }
+
+  load(){
+    console.log('hi')
+    this.setState({
+      isLoaded: true,
+    })
+  }
+
   renderBio(bio){
     return bio.map((p, i) =><div key={i}>{p}</div>);
   }
@@ -79,11 +125,14 @@ class About extends Component {
   render() {
     const { profilePhoto, resume, email, gitHub, linkedIn, bioTitle, bio } = aboutMe;
     const bioP = this.renderBio(bio);
+    const {isLoaded} = this.state;
 
     return (
       <StyledAbout className='About'>
-        <StyledCol>
-          <StyledImg src={profilePhoto} alt='profile' />
+        <StyledCol onLoad={this.load}>
+          <StyledAnimation isLoaded={isLoaded}>
+            <StyledImg src={profilePhoto} alt='profile'/>
+          </StyledAnimation>
         </StyledCol>
         <StyledCol>
           <h1>Please connect with me</h1>

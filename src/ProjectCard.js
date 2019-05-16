@@ -17,32 +17,6 @@ const StyledDiv = styled.div`
     top: 0;
   }
 
-  ::before {
-    position: absolute;
-    background-color: #fff;
-    top: ${({ isLoaded }) =>{
-      return isLoaded? '100%' : 0;
-    }};
-    left: 0;
-    width: 50%;
-    content: "";
-    height: 100%;
-    transition: 1.5s all;
-  }
-
-  ::after {
-    position: absolute;
-    background-color: #fff;
-    bottom: ${({ isLoaded }) =>{
-      return isLoaded? '100%' : 0;
-    }};
-    right: 0;
-    width: 50%;
-    content: "";
-    height: 100%;
-    transition: 1.5s all;
-  }
-
   @media only screen and (max-width: 600px) {
     width: 60vw;
     height: 60vw;
@@ -70,25 +44,11 @@ const StyledLink = styled(Link)`
 `;
 
 class ProjectCard extends Component {
-  constructor(props){
-    super(props);
-    this.state={
-      isLoaded: false,
-    }
-    this.load = this.load.bind(this);
-  }
-
-  load(){
-    this.setState({
-      isLoaded: true,
-    });
-  }
-
   render() {
     const {img, title, id, tech} = this.props;
-    const {isLoaded} = this.state;
+
     return (
-      <StyledDiv className='Project' onLoad={this.load} isLoaded={isLoaded}>
+      <StyledDiv className='Project'>
         <StyledImg src={img} alt={title} />
         <StyledLink to={`/projects/${id}`} >
           <h3>{title}</h3>
