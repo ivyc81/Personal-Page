@@ -1,11 +1,11 @@
 // Projects
 import placeholder from './placeholder.gif';
 import warblerCover from './Warbler-cover.png';
-import warblerGIF from './Warbler.gif';
+import warblerWebm from './Warbler.webm';
 import theRelishCover from './TheRelish-cover.png';
-import theRelishGIF from './TheRelish.gif';
+import theRelishWebm from './TheRelish.webm';
 import microblogCover from './Microblog-cover.png';
-import microblogGIF from './Microblog.gif';
+import microblogWebm from './Microblog.webm';
 
 // About me
 import profilePhoto from './profile.png';
@@ -22,7 +22,7 @@ export const projects = {
     deployedURL:'',
     github:'',
     tech: 'React, Redux, Firebase',
-    gif: theRelishGIF,
+    webm: theRelishWebm,
   },
   2:
   {img: warblerCover,
@@ -32,7 +32,7 @@ export const projects = {
    deployedURL:'https://warbler-less.herokuapp.com/',
    github:'https://github.com/ivyc81/Warbler',
    tech: 'Python, Flask',
-   gif: warblerGIF,
+   webm: warblerWebm,
   },
   3:
   {img: microblogCover,
@@ -42,7 +42,7 @@ export const projects = {
     deployedURL:'https://microblog-less.herokuapp.com/',
     github:'https://github.com/ivyc81/redux-microblog',
     tech: 'Javascript, React, Redux',
-    gif: microblogGIF,
+    webm: microblogWebm,
   },
 };
 
