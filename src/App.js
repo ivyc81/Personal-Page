@@ -7,7 +7,7 @@ import Portfolio from './Portfolio';
 import Project from './Project';
 import About from './About';
 import Footer from './Footer';
-import { textColor } from './theme';
+import { textColor, font, logoFont } from './theme';
 // import './App.css';
 
 const StyledApp = styled.div`
@@ -16,11 +16,11 @@ const StyledApp = styled.div`
   }
 
   h1 {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: ${logoFont};
   }
 
   div,button {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: ${font};
   }
 
   color: ${textColor};

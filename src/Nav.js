@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from './logo.png';
-import { navBackgroundColor, navTextColor } from './theme';
+import { navBackgroundColor, navTextColor, logoFont } from './theme';
 
 const StyledLogo = styled(Link)`
   display: flex;
@@ -10,6 +10,7 @@ const StyledLogo = styled(Link)`
   font-size: 1.2em;
   text-decoration: none;
   color: ${navTextColor};
+  font-family: ${logoFont};
 
   img {
     height: 4vh;
