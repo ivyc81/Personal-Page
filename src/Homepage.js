@@ -16,6 +16,11 @@ const StyledHomepage = styled.div`
   justify-content: center;
   align-items: center;
   width: 100vw;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 600px) {
+    width: 90vw;
+  }
 `;
 
 const Container = styled.div`

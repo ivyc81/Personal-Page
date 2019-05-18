@@ -8,7 +8,7 @@ const StyledProject = styled.div`
   position: relative;
   top: 6vh;
   display: flex;
-  height: 90vh;
+  min-height: 90vh;
   width: 80vw;
   margin: 0 auto;
 
@@ -16,7 +16,8 @@ const StyledProject = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 90vw;
+    padding: 2px;
   }
 `;
 
@@ -34,6 +35,9 @@ const StyledCol = styled.div`
 
   @media only screen and (max-width: 600px) {
     width: 100%;
+    height: ${({ isLeft }) => {
+      return isLeft  ? '40vh' : '60vh';
+    }};
 `;
 
 const StyledVideo = styled.video`

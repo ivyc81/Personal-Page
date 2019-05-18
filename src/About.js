@@ -15,7 +15,7 @@ const StyledAbout = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 90vw;
   }
 `;
 
@@ -33,6 +33,7 @@ const StyledCol = styled.div`
 const StyledAnimation = styled.div`
   max-width: 80%;
   position: relative;
+  overflow: hidden;
 
   :before {
     position: absolute;
