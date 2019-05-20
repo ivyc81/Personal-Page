@@ -113,7 +113,6 @@ class About extends Component {
   }
 
   load(){
-    console.log('hi')
     this.setState({
       isLoaded: true,
     })
